@@ -18,7 +18,7 @@ grow any larger.
 #include <stdlib.h>
 #include <math.h>
 #include <assert.h>
-// initialization step for the game method the prng and the global size and location)
+// initialization step for the game method, the prng and the global size and location)
 
 int Marios_bounce(int hops);
 int randint(int n);
@@ -32,11 +32,11 @@ int main(int argc, char *argv[])
 
 	// Checks of input arguments and ability to open the output file.
 	if (atoi(argv[1]) < 1) {
-		printf("Please put a non-zero number for hops");
+		printf("Please put a positive, non-zero integer for hops\n format: Mario_wonderland <hops in each trial> <trials>");
 		exit(1);
 	}
 	if (atoi(argv[2]) < 1) {
-		printf("Please put a non-zero number for rounds");
+		printf("Please put a positive, non-zero integer for trials\n format: Mario_wonderland <hops in each trial> <trials>");
 		exit(1);
 	}
 	FILE *f = fopen("MarioCarlo.txt", "w");
